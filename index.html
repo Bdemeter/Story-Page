@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Start Bootstrap Template</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Page Content -->
+    <div class="d-flex hero intro section">
+      <div class="row justify-content-center align-self-center">
+        <h1 class="wow intro-title animated fadeInUp">Help in your local community</h1>
+      </div>
+    </div>
+
+    <div class="d-flex hero section-two section">
+      <div class="row justify-content-center align-self-center">
+        <h1 class="wow two-title animated fadeInUp">See the landscape around you</h1>
+      </div>
+    </div>
+
+    <div class="d-flex hero section-three section">
+        <img class="wow animated front-img" src="images/Front Image 2.gif">
+      <div class="row justify-content-center align-self-center">
+        <!-- <h1 class="wow three-title animated fadeInUp">Help fuel a change in our people</h1> -->
+        <!-- <img class="front-img" src="images/Front Image 2.gif"> -->
+      </div>
+    </div>
+  
+
+  <!-- JavaScript -->
+  <script src="jquery/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scrollspy.js"></script>
+  <script src="js/jquery.scrollify.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/main.js"></script>
+  
+<script>
+  // Helper function for add element box list in WOW
+WOW.prototype.addBox = function(element) {
+    this.boxes.push(element);
+  };
+
+  // Init WOW.js and get instance
+  var wow = new WOW();
+  wow.init();
+
+  // Attach scrollSpy to .wow elements for detect view exit events,
+  // then reset elements and add again for animation
+  $('.wow').on('scrollSpy:exit', function() {
+    $(this).css({
+      'visibility': 'hidden',
+      'animation-name': 'none'
+    }).removeClass('animated');
+    wow.addBox(this);
+  }).scrollSpy();
+</script>
+
+</body>
+
+</html>
